@@ -10,9 +10,7 @@ namespace RemoveToTwo
         {
             Console.WriteLine("Write string: ");
             string stringToReduceToTwo = Console.ReadLine();
-
             string longestString = FindLongestStringOfTwo(stringToReduceToTwo);
-
             Console.WriteLine($"Length: {longestString.Length}\nString: {longestString}");
 
         }
@@ -20,10 +18,12 @@ namespace RemoveToTwo
         private static char[] FindDistinctCharacters(string stringToFindCharacters)
         {          
             char[] stringCharacters = stringToFindCharacters.ToCharArray();
+
             if(stringToFindCharacters == "")
             {
                 return stringCharacters;
             }
+
             List<char> stringCharactersDistinct = new List<char> {stringCharacters[0]};
             foreach (char stringCharacter in stringCharacters)
             {
